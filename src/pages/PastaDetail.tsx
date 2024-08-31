@@ -10,9 +10,9 @@ const PastaDetail: React.FC = () => {
     const [pasta, setPasta] = useState<Pasta | null>(null);
     const [fontSize, setFontSize] = useState(16); // Default font size
 
-    const handleFontSizeChange = (value: number) => {
-        console.log(value)
-        setFontSize(value);
+    const handleFontSizeChange = (value: number[]) => {
+        console.log(value[0]);  // Log the first (and only) value in the array
+        setFontSize(value[0]);  // Set fontSize to the first value
     };
 
 
